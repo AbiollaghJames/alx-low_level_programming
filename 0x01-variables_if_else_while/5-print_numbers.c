@@ -12,8 +12,8 @@ int main(void)
 
 	for (abby = 0; abby < 10; abby++)
 	{
-		printf("%d", abby);
+		putchar(abby);
 	}
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
