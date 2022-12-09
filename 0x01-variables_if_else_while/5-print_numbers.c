@@ -8,6 +8,8 @@ int main(void)
 {
 	int abby;
 
+	abby =0;
+
 	for (abby = 0; abby < 10; abby++)
 	{
 		printf("%d", abby);
