@@ -13,7 +13,7 @@ int main(void)
 
 	while (aj <= 'z')
 	{
-		if ((aj != 'q' || aj != 'e') && aj <= 'z')
+		if ((aj != 'q' && aj != 'e'))
 			putchar(aj);
 		aj++;
 	}
