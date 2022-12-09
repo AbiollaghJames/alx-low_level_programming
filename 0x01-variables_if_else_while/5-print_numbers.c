@@ -8,12 +8,10 @@ int main(void)
 {
 	int abby;
 
-	abby = 0;
-
 	for (abby = 0; abby < 10; abby++)
 	{
-		putchar(abby);
+		printf("%d", abby);
 	}
-	putchar('\n');
+	printf('\n');
 	return (0);
 }
