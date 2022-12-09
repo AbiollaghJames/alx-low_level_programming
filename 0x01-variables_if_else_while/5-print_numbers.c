@@ -10,7 +10,7 @@ int main(void)
 
 	abby = 0;
 
-	for (abby = 0; abby <= 10; abby++)
+	for (abby = 0; abby < 10; abby++)
 	{
 		putchar(abby);
 	}
