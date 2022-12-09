@@ -8,9 +8,7 @@ int main(void)
 {
 	int abby;
 
-	abby = 0;
-
-	while (abby <= 9)
+	for (abby = '0'; abby <= '9'; abby++)
 	{
 		putchar(abby);
 	}
