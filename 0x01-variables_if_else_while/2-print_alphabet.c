@@ -8,10 +8,13 @@ int main(void)
 {
 	char abby;
 
-	for (abby = 'a'; abby  <= 'z'; abby++)
-	{
-		putchar(abby);
-	}
+	abby = 'a';
+	while
+		(abby <= 'z')
+		{
+			putchar(abby);
+			abby++;
+		}
 	putchar("\n");
 	return (0);
 }
