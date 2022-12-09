@@ -15,6 +15,6 @@ int main(void)
 			putchar(abby);
 			abby++;
 		}
-	putchar("\n");
+	putchar('\n');
 	return (0);
 }
