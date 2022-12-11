@@ -8,14 +8,18 @@ int main(void)
 {
 	int abby;
 
-	for (abby = '0'; abby <= '9'; abby++)
+	for (abby = 0; abby < 10; abby++)
 	{
-		putchar(abby);
-		if (abby == '9')
-			continue;
+		putchar(abby + '0');
+
+		if (abby < 9)
+
+		{
 
 		putchar(',');
-		putchar(',');
+		putchar(' ');
+
+		}
 	}
 	putchar('\n');
 	return (0);
