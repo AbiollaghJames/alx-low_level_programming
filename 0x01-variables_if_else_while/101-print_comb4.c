@@ -6,23 +6,22 @@
  */
 int main(void)
 {
-	int ab1, ab2, ab3;
+	int abb1, abb2, abb3;
 
-	for (ab1 = 0; ab1 < 9; ab1++)
+	for (abb1 = 0; abb1 < 9; abb1++)
 	{
-		for (ab2 = ab1 + 1; ab2 < 9; ab2++)
+		for (abb2 = abb1 + 1; abb2 < 9; abb2++)
 		{
-			for (ab3 = ab2 + 1; ab3 < 10; ab3++)
+			for (abb3 = abb2 + 1; abb3 < 10; abb3++)
 			{
-				 putchar((ab1 % 10) + '0');
-				 putchar((ab2 % 10) + '0');
-				 putchar((ab3 % 10) + '0');
+				putchar((abb1 % 10) + '0');
+				putchar((abb2 % 10) + '0');
+				putchar((abb3 % 10) + '0');
 
-				 if (ab1 == 7 && ab2 == 8 && ab3 == 9)
-					 continue;
-
-				 putchar(',');
-				 putchar(' ');
+				if (abb1 == 7 && abb2 == 8 && abb3 == 9)
+					continue;
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
