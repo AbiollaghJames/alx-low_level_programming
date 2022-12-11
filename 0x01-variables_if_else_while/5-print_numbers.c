@@ -8,11 +8,9 @@ int main(void)
 {
 	int abby;
 
-	abby = 0;
-
 	for (abby = 0; abby < 10; abby++)
 	{
-		putchar(abby);
+		putchar(abby + '0');
 	}
 	putchar('\n');
 	return (0);
