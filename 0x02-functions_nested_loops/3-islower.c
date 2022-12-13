@@ -1,6 +1,6 @@
 #include "main.h"
 /*
- * islower - checks if a character is lpowercase
+ * _islower - checks if a character is lpowercase
  */
 
 int _islower(int c)
