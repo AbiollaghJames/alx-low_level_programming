@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - check the code.
+ * print_sign - Prints sign of a digit
  * @n: parameter
  *
  * Return: Always 0.
