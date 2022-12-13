@@ -2,10 +2,11 @@
 /**
  * add - adds two integers
  * @a: parameter
+ * @b: parameter
  *
  * Return: 0
  */
-int add(int a, int a)
+int add(int a, int b)
 {
 	int sum = a + b;
 
