@@ -1,7 +1,8 @@
 #include "main.h"
 /**
- * mul - Multiply two numbers
- * @ a, b: Parameters
+ *mul - Multiply two numbers
+ *@a: First number
+ *@b: second number
  *
  * Return: 0
  */
