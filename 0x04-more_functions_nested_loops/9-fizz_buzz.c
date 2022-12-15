@@ -25,11 +25,7 @@ int main(void)
 		else
 		{
 			printf("%d", x);
-		}
-		if (x == 100)
-		{
-			continue;
-		}
+		}	
 		printf(" ");
 	}
 	printf("\n");
