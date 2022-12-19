@@ -7,7 +7,19 @@
  */
 void print_array(int *a, int n)
 {
-	int x;
+	int i, len1, len2;
+	char tmp;
 
-	for (x = 0; 
+	while (s[len1] != '\0')
+		len1++;
+
+	len2 = len1 - 1;
+
+	for (i = 0; i < len1; i++)
+	{
+		tmp = s[i];
+		s[i] = s[len2];
+		s[len2] = tmp;
+		len2 -= 1;
+	}
 }
