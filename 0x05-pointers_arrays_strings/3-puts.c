@@ -2,13 +2,15 @@
 /**
  * _puts - prints a string
  * @str: parameter
- * Return 0
+ * Return: printed string
  */
 void _puts(char *str)
 {
-	while (*str != '\0')
+	int s;
+
+	for (s = 0; str[s] != '\0'; s++)
 	{
-		_putchar(*str++);
+		_putchar("%c", str[s]);
 	}
 	_putchar('\n');
 }
