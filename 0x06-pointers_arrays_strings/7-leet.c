@@ -6,15 +6,19 @@
  */
 char *leet(char *str)
 {
-	int x = 0, i;
-	char leet[8] = {'O', 'L', '?', 'E','A', '?', '?', 'T'};
+	int x, y;
+	int z[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	int a[] = {'4', '3', '0', '7', '1'};
 
-	while (str[++x])
+	for (x = 0; str[x] != '\0'; x++)
 	{
-		for (i = 0; i <= 7; i++)
+		for (y = 0; y<= 9; y++)
 		{
-			if (str[x] == leet[i] || str[x] - 32 == leet[i])
-				str[x] = i + '0';
+			if (str[x] == z[y])
+			{
+				str[x] = a[y / 2];
+				y = 9;
+			}
 		}
 	}
 	return (str);
