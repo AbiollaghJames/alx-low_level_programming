@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Return; 0
+ * Return: 0
  */
 int main(void)
 {
@@ -17,7 +17,7 @@ int main(void)
 	{
 		if (count == 50)
 		{
-			printf("%lu /n", res);
+			printf("%lu \n", res);
 		}
 		else
 		{
