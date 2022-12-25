@@ -6,23 +6,28 @@
  */
 int main(void)
 {
-	int i = 0;
-	long j = 1, k = 2;
+	int count = 3;
+	long int first = 1, sec = 2;
+	long int res = first + sec;
 
-	while (i < 50)
+	printf("%lu, ", first);
+	printf("%lu, ", sec);
+
+	while (count <= 50)
 	{
-		if (i == 0)
-			printf("%ld", j);
-		else if (i == 1)
-			printf(", %ld", k);
+		if (count == 50)
+		{
+			printf("%lu /n", res);
+		}
 		else
 		{
-			k += j;
-			j = k - j;
-			printf(", %ld", k);
+			printf("%lu, ", res);
 		}
-		++i;
+		first = sec;
+		sec = res;
+
+		res = first + sec;
+		count++;
 	}
-	printf("\n");
 	return (0);
 }
