@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	int count 3;
-	int x = 1, y = 2;
+	int count = 3;
+	long int x = 1, y = 2;
 	long int res = x + y;
 
 	printf("%lu, ", x);
