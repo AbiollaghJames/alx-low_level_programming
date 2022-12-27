@@ -14,8 +14,8 @@ void print_to_98(int n)
 	{
 		printf("%d", x);
 
-		if (y < 98)
-			printf(", ");
+		if (x < 98)
+			printif(", ");
 	}
 	printf("\n");
 }
