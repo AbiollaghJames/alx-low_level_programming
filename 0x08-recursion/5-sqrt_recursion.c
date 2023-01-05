@@ -5,19 +5,15 @@
  * @sqr: possible sqrt
  * Return: 0 Sucess
  */
-int abby(int num, sqr)
+int abby(int n, s)
 {
-	if ((sqr * sqr) == num)
-	{
-		return (sqr);
-	}
-	else
-	{
-		if ((sqr * sqr) > num)
-			return (-1);
-		else
-			return (abby(num, sqr + 1));
-	}
+	int square = s * s;
+
+	if (square > n)
+		return (-1);
+	if (square == n)
+		return (s);
+	return (abby(n, s + 1));
 }
 /**
  * _sqrt_recursion - return square root of number
@@ -26,8 +22,5 @@ int abby(int num, sqr)
  */
 int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	else
-		return (abby(n, 1));
+	return (abby(n, 1));
 }
