@@ -1,19 +1,19 @@
 #include "main.h"
 /**
  * abby - helper function to check if sqrt exists
- * @num: par 1
- * @sqr: possible sqrt
+ * @n: par 1
+ * @i: possible sqrt
  * Return: 0 Sucess
  */
-int abby(int n, s)
+int abby(int n, int i)
 {
-	int square = s * s;
+	int square = i * i;
 
 	if (square > n)
 		return (-1);
 	if (square == n)
-		return (s);
-	return (abby(n, s + 1));
+		return (i);
+	return (abby(n, i + 1));
 }
 /**
  * _sqrt_recursion - return square root of number
