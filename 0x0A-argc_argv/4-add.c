@@ -1,34 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
+
 /**
- * main - addition
- * @argc: par 1
- * @argv: par 2
- * Return: 0 Success
+ * main - program that adds positive numbers
+ *
+ * @argc: size of argv array and number of command line arguments
+ *
+ * @argv: An array of size argc
+ *
+ * Return: 0
  */
+
 int main(int argc, char *argv[])
 {
-	int res, num, x, y, z;
+	int i, j;
+	int sum = 0;
 
-	if (argc == 1)
+	if (argc < 1)
+	{
 		printf("0\n");
 
-	for (x = 1; x < argc; x++)
+	}
+
+	for (i = 1; i < argc; i++)
 	{
-		for (y = 0; argv[x][y] != '\0'; y++)
+		sum += atoi(argv[i]);
+
+		for (j = 0; argv[i][j] != '\0'; j++) /*argv is a 2-d array*/
 		{
-			if (argv[x][y] > '9' || argv[x][y] < '0')
+			if (!(isdigit(argv[i][j])))
 			{
-				printf("%s\n", "Error");
-				return (1);
+				printf("Error\n");
+
+				return (0);
 			}
 		}
 	}
-	for (z = 1; z < argc; z++)
-	{
-		num = atoi(argv[z]);
-		res += num;
-	}
-	printf("%d\n", res);
+
+	printf("%d\n", sum);
+
 	return (0);
 }
