@@ -16,8 +16,11 @@ int main(int argc, char *argv)
 	{
 		for (y = 0; argv[x][y] != '\0'; y++)
 		{
-			printf("%s\n", "Error");
-			return (1);
+			if (argv[x][y] > '9' || argv[x][y] < '0')
+			{
+				printf("%s\n", "Error");
+				return (1);
+			}
 		}
 	}
 	for (z = 0; z < argc; z++)
