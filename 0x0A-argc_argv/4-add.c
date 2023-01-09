@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - addition
  * @argc: par 1
  * @argv: par 2
  * Return: 0 Success
  */
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
 	int res, num, x, y, z;
 
