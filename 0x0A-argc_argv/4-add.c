@@ -12,7 +12,7 @@ int main(int argc, char *argv)
 	if (argc == 1)
 		printf("0\n");
 
-	for (x = 0; x < argc; x++)
+	for (x = 1; x < argc; x++)
 	{
 		for (y = 0; argv[x][y] != '\0'; y++)
 		{
@@ -23,7 +23,7 @@ int main(int argc, char *argv)
 			}
 		}
 	}
-	for (z = 0; z < argc; z++)
+	for (z = 1; z < argc; z++)
 	{
 		num = atoi(argv[z]);
 		res += num;
