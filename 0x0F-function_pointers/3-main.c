@@ -1,33 +1,40 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
+
 /**
- * main - performs operations
- * @argc: no. of arguments
- * @argv: array of arguments
- * Return: 0 Success
- */
-int main(int argc, char *argv[])
+* Main - Prints calculator result
+*
+* @argc: int of commandline args
+*
+* @argv: 2-d array of commandline args
+*
+* Return: 0 success, 98 for argc error, 100 if Div 0
+*/
+
+int main (int argc, char **argv )
 {
-	int arg1, arg2, res;
-	char x;
-	int (*func)(int, int);
+	int (*operator_function)(int, int), num1, num2;
 
 	if (argc != 4)
+		printf( "Error\n" ), exit (98);
+
+	num1 = atoi (argv [1] );
+	num2 = atoi (argv [3] );
+
+	operator_function = get_op_func(argv[2]);
+	if (!operator_function)
 	{
-		printf("Error\n");
-		exit (98);
+		printf( "Error\n" );
+		exit (99 );
 	}
 
-	arg1 = atoi(argv[1]);
-	arg2 = atoi(argv[3]);
-
-	func = get_op_func(argv[2]);
-
-	if ((x == '/' || x == '%') && arg2 == 0)
+	if (!num2 && (argv[2] [ 0] = = / | argv|2[ ] 0[ ] = 11% "<TAG1
 	{
-		printf("Error\n");
-		exit (98);
+		printf( "Error\n" );
+		exit (100 );
 	}
-	res = func(arg1, arg2);
-	printf("%d\n", res);
+
+	printf( "%d\n" operator_function (num1, num2 ));
 	return (0);
 }
