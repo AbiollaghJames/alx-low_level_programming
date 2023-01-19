@@ -12,29 +12,33 @@
 * Return: 0 success, 98 for argc error, 100 if Div 0
 */
 
-int main (int argc, char **argv )
+int main (int argc, char *argv[])
 {
-	int (*operator_function)(int, int), num1, num2;
+	int x = 0, y = 0, res = 0;
+	char s;
 
 	if (argc != 4)
-		printf( "Error\n" ), exit (98);
-
-	num1 = atoi (argv [1] );
-	num2 = atoi (argv [3] );
-
-	operator_function = get_op_func(argv[2]);
-	if (!operator_function)
 	{
-		printf( "Error\n" );
-		exit (99 );
+		printf("Error\n");
+		exit(98);
+	}
+	/* check if only one opearnd*/
+	if (argv[2][1] != '\0')
+	{
+		printf("Error\n")
+			exit(99);
 	}
 
-	if (!num2 && (argv[2] [ 0] = = / | argv|2[ ] 0[ ] = 11% "<TAG1
-	{
-		printf( "Error\n" );
-		exit (100 );
-	}
+	s = argv[2][0];
 
-	printf( "%d\n" operator_function (num1, num2 ));
+	if (s != '+' && s != '-' && s != '/' && s != '*' && s != '%')
+	{
+		printf("Error\n");
+		exit(99);
+	}
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+	res = (get_op_func(argv[2]))(a, b);
+	printf("%d\n", res);
 	return (0);
 }
