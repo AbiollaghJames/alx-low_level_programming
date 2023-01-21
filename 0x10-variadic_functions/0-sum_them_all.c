@@ -4,6 +4,7 @@
  * sum_them_all - return sum of all params
  * @n: No of params passed to function
  * @...: No of params to calculate sum
+ * Return: 0 Success
  */
 int sum_them_all(const unsigned int n, ...)
 {
