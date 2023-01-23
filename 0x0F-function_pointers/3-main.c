@@ -1,10 +1,9 @@
 #include "3-calc.h"
-#include "function_pointers.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* Main - Prints calculator result
+* main - Prints calculator result
 *
 * @argc: int of commandline args
 *
@@ -12,30 +11,37 @@
 *
 * Return: 0 success, 98 for argc error, 100 if Div 0
 */
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int num1, num2;
-	char *op;
+	int one, two, ans;
+	int (*res)(int, int);
+	char *get_op;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	num1 = atoi(argv[1]);
-	op = argv[2];
-	num2 = atoi(argv[3]);
 
-	if (get_op_func(op) == NULL || op[1] != '\0')
+	one = atoi(argv[1]);
+	two = atoi(argv[3]);
+	get_op = argv[2];
+
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((*op == '/' && num2 ==0) || (*op == '%' && num2 == 0))
+
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(op)(num1, num2));
+
+	res = get_op_func(get_op);
+	ans = res(one, two);
+
+	printf("%d\n", ans);
 	return (0);
 }

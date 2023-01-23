@@ -3,7 +3,8 @@
 #include <stdio.h>
 /**
  * get_op_func - function pointer to select the right function
- * @s: operator given by user * Return: 0 Success
+ * @s: operator given by user 
+ * Return: 0 Success
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -20,8 +21,8 @@ int (*get_op_func(char *s))(int, int)
 
 	while (op_s[i].op)
 	{
-		if (*(op_s[i].op == *s)
-				return (op_s[i].f);
+		if (*(op_s[i].op) == *s)
+			return (op_s[i].f);
 
 		i++;
 	}
