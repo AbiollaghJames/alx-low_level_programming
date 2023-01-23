@@ -2,10 +2,11 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
- * get_op_func - function pointer to select the right function
- * @s: operator given by user 
- * Return: 0 Success
- */
+* get_op_func - function pointer to select the right function
+* @s: operator given by user
+* Return: 0 Success
+*/
+
 int (*get_op_func(char *s))(int, int)
 {
 	op_t op_s[] = {
@@ -23,7 +24,6 @@ int (*get_op_func(char *s))(int, int)
 	{
 		if (*(op_s[i].op) == *s)
 			return (op_s[i].f);
-
 		i++;
 	}
 	return (NULL);
