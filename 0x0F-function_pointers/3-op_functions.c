@@ -1,4 +1,6 @@
 #include "3-calc.h"
+#include <stdlib.h>
+#include <stdio.h>
 /**
  * op_add - adds 2 ints
  * @a: par 1
