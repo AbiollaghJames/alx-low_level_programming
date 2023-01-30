@@ -2,18 +2,23 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * h - par 1
- * print_list: prints all elements of list
+ * print_list - prints elements of list
+ * @h: pointer to struct list
  * Return: Number of node
  */
-size_t priint_list(const list_t *h)
+size_t print_list(const list_t *h)
 {
 	int count = 0;
 
 	while (h != NULL)
 	{
-		count++;
+		if (h->str == NULL)
+			printf("[0] (nil)\n");
+		else
+			printf("[%d] %s\n", h->len, h->str);
+
 		h = h->next;
+		count++;
 	}
 	return (count);
 }
