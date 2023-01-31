@@ -1,6 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
 /**
  * print_list - prints elements of list
  * @h: pointer to struct list
