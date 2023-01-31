@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * lists_s - Singly linked list
+ * struct lists_s - Singly linked list
  * @str: string that is malloced
  * @len: length of string
  * @next: points to next node
