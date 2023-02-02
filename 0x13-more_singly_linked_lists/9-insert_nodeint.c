@@ -1,5 +1,5 @@
 #include "lists.h"
-/**insert_nodeint_at_index - insert node at given position
+/*insert_nodeint_at_index - insert node at given position
  * @head: pointer to head
  * @idx: index where we insert the node
  * @n: integer data of node
