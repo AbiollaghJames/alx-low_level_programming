@@ -6,11 +6,11 @@
  */
 size_t print_listint(const listint_t *h)
 {
-	size_t elems;
+	unsigned int elems = 0;
 
 	while (h)
 	{
-		printf("%d", h->n);
+		printf("%d\n", h->n);
 		elems++;
 		h = h->next;
 	}
