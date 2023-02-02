@@ -4,17 +4,15 @@
 #include <stdlib.h>
 
 /**
- * struct list_s - list
- * @str: string
- * @len: length
+ * struct list_s - singly linked list
+ * @n: integer
  * @next: pointer to next node
- * Return: 0 Success
+ * Description: singly linked list node structure
  */
-typedef struct list_s
+typedef struct listint_s
 {
-	char *str;
-	unsigned int len;
-	struct list_s *next;
+	int n;
+	struct listint_s *next;
 } listint_t;
 
 int _putchar(char c);
