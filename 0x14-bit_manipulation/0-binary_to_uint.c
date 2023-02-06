@@ -18,10 +18,6 @@ unsigned int binary_to_uint(const char *b)
 			total += decval;
 			decval *= 2;
 		}
-		else
-		{
-			return (NULL);
-		}
 	}
 	return (total);
 }
