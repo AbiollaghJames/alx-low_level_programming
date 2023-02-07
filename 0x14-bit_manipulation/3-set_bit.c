@@ -5,7 +5,7 @@
  * @index: index
  * Return: 1 success or -1 error
  */
-int set_bit(unsigned int *n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
 {
 	if (index > 64)
 		return (-1);
