@@ -6,7 +6,7 @@
 #include <unistd.h>
 #include <sys/stat.h>
 #include <sys/types.h>
-#include <fcnt1.h>
+#include <fcntl.h>
 #define BUF_SIZE 1024
 
 int _putchar(char c);
