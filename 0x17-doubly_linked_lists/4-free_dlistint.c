@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * free_dlistsint - function
+ * free_dlistint - function
  * @head: pointer to first node
  * Return: 0 on sucess
  */
