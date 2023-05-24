@@ -4,23 +4,27 @@
 
 def island_perimeter(grid):
     """Returns perimeter of island in grid"""
-    x = 0
-    length = len(grid) - 1
-    width = len(grid) - 1
 
-    for i, j in enumerate(grid):
-        for m, n in enumerate(j):
-            if n == 1:
-                if i == 0 or grid[i - 1][m] != 1:
-                    x += 1
+    per = 0
+    length = len(grid)
 
-                if m == 0 or grid[i][m - 1] != 1:
-                    x += 1
+    if grid != []:
+        width = len(grid[0])
 
-                if m == width or grid[i][m + 1] != 1:
-                    x += 1
+    for i in range(length):
+        for j in range(width):
 
-                if i == length or grid[i + 1][m] != 1:
-                    x += 1
+            if grid[i][j] == 1:
+                if (i - 1) == -1 or grid[i - 1][j] == 0:
+                    per += 1
 
-    return x
+                if (i + 1) == length or grid[i + 1][j] == 0:
+                    per += 1
+
+                if (j - 1) == -1 or grif[i][j - 1] == 0:
+                    per += 1
+
+                if (j + 1) == width or grid[i][j + 1] == 0:
+                    per += 1
+
+    return per
