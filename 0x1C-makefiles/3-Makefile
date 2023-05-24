@@ -18,8 +18,7 @@ oclean:
 	$(RM) $(OBJ)
 
 # delete Emacs, Vim, executable and object files
-fclean:
-	$(RM) *~ $(NAME) $(OBJ)
+fclean: clean oclean
 
 #recompilation of all source files
 re: oclean all
