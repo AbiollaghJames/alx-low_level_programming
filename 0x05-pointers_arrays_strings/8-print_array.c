@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * print_array - prints elements of an array
- * @a: parameter 1
- * @n: parameter 2
+ * @a: array to print its elements
+ * @n: array size
  * Return: 0
  */
 void print_array(int *a, int n)
