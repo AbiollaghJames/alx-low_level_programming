@@ -17,7 +17,7 @@ void print_arr(int *array, size_t low, size_t high)
 		printf("%d", array[i]);
 
 		if (i < high)
-			printf(",");
+			printf(", ");
 	}
 	printf("\n");
 }
@@ -49,7 +49,6 @@ int binary_search(int *array, size_t size, int value)
 		{
 			high = mid - 1;
 		}
-		/*print_arr(array, low, high);*/
 	}
 	return (-1);
 }
