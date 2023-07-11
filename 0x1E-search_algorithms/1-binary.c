@@ -1,14 +1,14 @@
 #include "search_algos.h"
 /**
- * print_arr - Prints an array
+ * print_array - Prints an array
  * @array: Pointer to 1st element of array to search in
  * @low: 1st element of the array
  * @high: Element at end of array
  * Return: NULL
  */
-void print_arr(int *array, size_t low, size_t high)
+void print_array(int *array, int low, int high)
 {
-	size_t i;
+	int i;
 
 	printf("Searching in array: ");
 
@@ -17,7 +17,10 @@ void print_arr(int *array, size_t low, size_t high)
 		printf("%d", array[i]);
 
 		if (i < high)
-			printf(", ");
+		{
+			printf(",");
+			printf(" ");
+		}
 	}
 	printf("\n");
 }
@@ -36,7 +39,7 @@ int binary_search(int *array, size_t size, int value)
 	{
 		size_t mid = low + (high - low) / 2;
 
-		print_arr(array, low, high);
+		print_array(array, low, high);
 
 		if (array[mid] == value)
 			return (mid);
