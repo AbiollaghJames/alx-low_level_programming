@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "search_algos.h"
 /**
  * linear_search - searches a value using linear search
