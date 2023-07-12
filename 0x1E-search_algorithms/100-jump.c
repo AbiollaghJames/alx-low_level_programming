@@ -3,9 +3,10 @@
 #include "search_algos.h"
 /**
  * jump_search - searches for value in sorted array using jump sort
- * @array: pointer to first element of array to search in
- * @size: number of elements in the array
- * @value: value to search for
+ * @array: Pointer to first element of array to search in
+ * @size: Vumber of elements in the array
+ * @value: Value to search for
+ * Return: Index of value or -1 on failure
  */
 int jump_search(int *array, size_t size, int value)
 {
