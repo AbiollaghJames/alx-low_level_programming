@@ -2,8 +2,7 @@
 /**
  * print_array - Prints an array
  * @array: Pointer to first element of array
- * @low: 1st element of the array
- * @high: Element at end of array
+ * @size: length of array
  * Return: NULL
  */
 void print_array(int *array, int size)
